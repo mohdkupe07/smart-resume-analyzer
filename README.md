@@ -1,102 +1,92 @@
-🤖 AI Resume Analyzer
-Overview
+# 🤖 AI Resume Analyzer
 
-AI Resume Analyzer is a full-stack web application that uses Artificial Intelligence to analyze resumes. It extracts skills, calculates ATS score, and recommends job roles from uploaded PDF resumes.
+## Overview
+AI Resume Analyzer is a full-stack AI-powered web application that analyzes uploaded PDF resumes. It extracts skills, evaluates ATS score, and recommends relevant job roles using advanced AI (Groq LLaMA 3.3 70B).
 
-Features
-Upload PDF resume
-AI-based skill extraction
-ATS score calculation
-Job role recommendations
-Missing skills detection
-Tech Stack
+## Key Features
+- Upload and process PDF resumes  
+- AI-powered skill extraction  
+- ATS (Applicant Tracking System) score generation  
+- Job role recommendations based on resume content  
+- Detection of missing industry-relevant skills  
+- Fast and lightweight REST API  
 
-Frontend: HTML, JavaScript, Vite
-Backend: Node.js, Express.js, Multer, pdf-parse
-AI Model: Groq LLaMA 3.3 70B
+## Tech Stack
+Frontend: HTML, JavaScript, Vite  
+Backend: Node.js, Express.js  
+Libraries: multer, pdf-parse, cors  
+AI Model: Groq LLaMA 3.3 70B  
 
-Project Structure
+## Project Structure
+AI-RESUME-ANALYSER  
+├── resume-backend  
+│   ├── server.js  
+│   ├── package.json  
+│   ├── package-lock.json  
+│  
+├── index.html  
+├── vite.config.js  
+├── README.md  
 
-AI-RESUME-ANALYSER
-├── resume-backend
-│ ├── server.js
-│ ├── package.json
-├── index.html
-├── vite.config.js
-├── README.md
+## How to Run Project
 
-How to Run
-Backend Setup
+### Backend Setup
+cd resume-backend  
+npm install  
+node server.js  
 
-cd resume-backend
-npm install
-node server.js
+Backend runs at: http://localhost:3001  
 
-Backend runs at:
-http://localhost:3001
+### Frontend Setup
+npm install  
+npm run dev  
 
-Frontend Setup
+Frontend runs at: http://localhost:5173  
 
-npm install
-npm run dev
+## API Reference
 
-Frontend runs at:
-http://localhost:5173
+Endpoint: POST /analyze  
 
-API Endpoint
+Request Type: multipart/form-data  
+Key: resume (PDF file)
 
-POST /analyze
-
-Form-data:
-key: resume (PDF file)
-
-Response:
+Response Example:
 {
-"success": true,
-"result": {
-"skills_found": [],
-"missing_skills": [],
-"ats_score": 85,
-"job_roles": [],
-"feedback": "string"
+  "success": true,
+  "result": {
+    "skills_found": [],
+    "missing_skills": [],
+    "ats_score": 85,
+    "job_roles": [],
+    "feedback": "Resume is well structured and suitable for tech roles."
+  }
 }
-}
 
-🖼️ Screenshots
+## Screenshots
+Add your project screenshots here:
 
+- Home Page  
+- Resume Upload Page  
+- AI Analysis Result Page  
 
+## Environment Variables
+Create a .env file inside resume-backend:
 
-Home Page
-<img width="1895" height="846" alt="image" src="https://github.com/user-attachments/assets/7a6f3673-573c-44fd-8056-e6ff86275dc0" />
-<img width="1897" height="696" alt="image" src="https://github.com/user-attachments/assets/303e2933-0253-4a00-bd23-a3ffd46133fa" />
+GROQ_API_KEY=your_api_key_here  
+PORT=3001  
 
+## Future Enhancements
+- User authentication system  
+- Resume history dashboard  
+- Downloadable AI report (PDF)  
+- Improved UI/UX design  
+- Cloud deployment  
 
+## Developer
+Mohammed Kupe  
 
-Upload Resume Page
-<img width="1897" height="912" alt="image" src="https://github.com/user-attachments/assets/6d1ecff3-aa8b-4db8-8e12-219c8cc00c9a" />
+## License
+This project is open-source and free to use.
 
-
-Result Page
-<img width="1077" height="857" alt="image" src="https://github.com/user-attachments/assets/a0cc8b87-3e64-49ed-96c9-8d177ddfb407" />
-
-
-Environment Variables
-
-Create .env file inside resume-backend:
-
-GROQ_API_KEY=your_api_key_here
-PORT=3001
-
-Future Improvements
-User authentication system
-Save resume history
-Better UI design
-Deploy to cloud
-Advanced ATS scoring system
-Developer
-
-Mohammed Kupe
-
-Note
-
-If you like this project, please give it a star ⭐ on GitHub.
+## Note
+If you like this project, please give it a ⭐ on GitHub.
