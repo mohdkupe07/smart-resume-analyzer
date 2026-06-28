@@ -43,31 +43,20 @@ npm run dev
 
 Frontend runs at: http://localhost:5173  
 
-## API Reference
-
-Endpoint: POST /analyze  
-
-Request Type: multipart/form-data  
-Key: resume (PDF file)
-
-Response Example:
-{
-  "success": true,
-  "result": {
-    "skills_found": [],
-    "missing_skills": [],
-    "ats_score": 85,
-    "job_roles": [],
-    "feedback": "Resume is well structured and suitable for tech roles."
-  }
-}
-
 ## Screenshots
 Add your project screenshots here:
 
-- Home Page  
-- Resume Upload Page  
-- AI Analysis Result Page  
+- Home Page
+  <img width="1904" height="753" alt="image" src="https://github.com/user-attachments/assets/eca940db-6448-43ca-a9bc-a2e9e7319a9f" />
+  <img width="1899" height="689" alt="image" src="https://github.com/user-attachments/assets/783c8210-42a8-4fed-87fd-e129356f775f" />
+
+
+- Resume Upload Page
+  <img width="1903" height="873" alt="image" src="https://github.com/user-attachments/assets/4e3e7ea2-7aed-4904-ae6b-a270cdb074f8" />
+
+- AI Analysis Result Page
+  <img width="929" height="916" alt="image" src="https://github.com/user-attachments/assets/5c2d3b5c-21ed-462b-bde6-c7c6eee68070" />
+
 
 ## Environment Variables
 Create a .env file inside resume-backend:
